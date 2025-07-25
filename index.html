@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mani Teja | AI Enthusiast</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 10%;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .logo span {
+      color: orange;
+    }
+
+    .navlist {
+      display: flex;
+      list-style: none;
+    }
+
+    .navlist li {
+      margin-left: 20px;
+    }
+
+    .navlist a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navlist a.active, .navlist a:hover {
+      color: orange;
+    }
+
+    .home {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+    }
+
+    .home-text {
+      flex: 1 1 60%;
+    }
+
+    .home-text h1 {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+
+    .home-text h3 {
+      font-size: 28px;
+      color: orange;
+      margin-bottom: 10px;
+    }
+
+    .home-text p {
+      font-size: 16px;
+      color: #ccc;
+      max-width: 600px;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+
+    .btn, .btn2 {
+      padding: 10px 20px;
+      margin-right: 10px;
+      text-decoration: none;
+      background: orange;
+      color: #111;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .btn2 {
+      background: transparent;
+      color: orange;
+      border: 1px solid orange;
+    }
+
+    .home-image {
+      flex: 1 1 35%;
+      text-align: center;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .home-image img {
+      width: 260px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+     .about, .portfolio, .contact, .end {
+      padding: 60px 10%;
+    }
+
+     .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-text {
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .about-text h2 span,
+    .portfolio .main-text h2 span,
+    .contact-text h2 span {
+      color: orange;
+    }
+
+
+    .portfolio-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 6px solid orange;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card h3 {
+      color: #ffa726;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .contact-text .list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-text .list li {
+      margin-bottom: 8px;
+    }
+
+    .contact-text .list a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    .contact-icons a {
+      font-size: 20px;
+      color: #ccc;
+      margin-right: 10px;
+    }
+
+    .end {
+      text-align: center;
+      background: #000;
+      padding: 20px;
+    }
+
+    .top a {
+      display: inline-block;
+      margin-top: 10px;
+      color: orange;
+    }
+
+    @media (max-width: 768px) {
+      .home {
+        flex-direction: column;
+        text-align: center;
+      }
+      .home-image {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo"><span>PORT</span>FOLIO</a>
+    <ul class="navlist">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <div class="slide">
+        <span class="one">Hello</span>
+        <span class="two">I'm</span>
+      </div>
+      <h1>Anndevara Mani Teja</h1>
+      <h3>AI & ML Enthusiast</h3>
+      <p>B.Tech (AI & Data Science) student passionate about building intelligent systems that solve real-world problems using machine learning and deep learning.</p>
+      <div class="button">
+        <a href="#contact" class="btn">Say Hello</a>
+        <a href="#portfolio" class="btn2"><span><i class='bx bx-play'></i></span>My Projects</a>
+      </div>
+    </div>
+    <div class="home-image">
+      <img src="prof.jpeg" alt="Profile" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>About <span>Me</span></h2>
+      <p>I’m a highly motivated AI & Data Science student with experience in developing ML models, building web apps, and working with cloud platforms. Skilled in Python, TensorFlow, Flask, and NLP tools. I’m eager to contribute to impactful AI projects and collaborate with innovative minds in tech.</p>
+      <a href="Mani_Teja_CV.docx" class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="main-text">
+      <p>My Work</p>
+      <h2><span>Detailed</span> Projects</h2>
+    </div>
+    <br>
+    <div class="portfolio-content">
+      <div class="project-card">
+        <h3>Real Estate Price Prediction</h3>
+        <p>Built regression models using Scikit-learn for house price estimation. Applied feature engineering techniques and achieved RMSE of 1.8.</p>
+      </div>
+      <div class="project-card">
+        <h3>Image Classification with CNNs</h3>
+        <p>Built CNNs using TensorFlow/Keras and achieved 92% accuracy on Fashion MNIST using dropout and data augmentation.</p>
+      </div>
+      <div class="project-card">
+        <h3>Customer Churn Prediction</h3>
+        <p>Developed classification models using Logistic Regression and Random Forest; optimized via SMOTE and GridSearchCV. Accuracy: 89%</p>
+      </div>
+      <div class="project-card">
+        <h3>Resume Screening System</h3>
+        <p>Extracted skills from resumes using spaCy & TF-IDF, matched to job descriptions using cosine similarity, built resume matcher tool.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-text">
+      <h2>Contact <span>Me</span></h2>
+      <ul class="list">
+        <li><a href="#">+91 6281100318</a></li>
+        <li><a href="#">amaniteja1234@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/maniteja03/">LinkedIn</a></li>
+      </ul>
+      <div class="contact-icons">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-youtube'></i></a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form action="">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email Address" required />
+        <input type="tel" placeholder="Your Mobile Number" required />
+        <textarea cols="30" rows="10" placeholder="How can I help you?" required></textarea>
+        <input type="submit" value="Send Message" class="submit" />
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="end">
+    <div class="last-text" style="text-align: center;">
+      <p>Copyright © 2025 by Mani Teja. All Rights Reserved.</p>
+    </div>
+    <div class="top">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
